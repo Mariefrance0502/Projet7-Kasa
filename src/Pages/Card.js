@@ -1,38 +1,28 @@
 import React, { useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
-
 import Navbar from "../Layout/Navbar"
 import Footer from "../Layout/Footer"
 import Shaping from "../Layout/Shaping"
 import ErrorPage from "./ErrorPage"
 import Collapse from '../Components/Collapse'
 import Carousel from '../Components/Carousel'
-
 import "../Styles/Card.scss"
-
 import records from "../Datas/logements.json"
 
 
-// Faire recherche  
+ 
 const arrayStars = [1, 2, 3, 4, 5]
-console.log(arrayStars);
 
 function Card() {
-    // // Faire recherche sur comment on  récupère l'ID de l'URL avec la serachParams et useSP
+   
     const [searchParams] = useSearchParams();
-    // console.log(searchParams);  
-
-    // Faire recherche sur useState, savoir pourquoi je dois mettre entre parenthèse comme ça !
-    // récupérer des données depuis une API avec useState
+  
     const [idLogement] = useState(searchParams.get('_id'));
     
-    // cherche l'id dans le fichier logements.json, on utilise la méthode find 
     const record = records.find(element => element.id === idLogement)
     
-    // si l'URL à été modifié manuellement, redirection vers la page d'erreur
     if (!record) return(<ErrorPage />)
 
-    // récupère la liste des équipements + Faire recherche sur toString, map 
     const equipements = record.equipments.map((element, index) => (
           <li className='description-content' key={"equip-"+index.toString()}>{element}</li>
         ))
@@ -43,10 +33,8 @@ function Card() {
             <Shaping>
                 <Navbar />
 
-                {/* carousel d'images */}
                 <Carousel pictures={record.pictures}/>
 
-                {/* 1 - affiche le titre, l'emplacement et les tags */}
                 <div className='ficheLogement'>
                     <div className='div-description'>
                         <h1>{record.title}</h1>
@@ -58,14 +46,13 @@ function Card() {
                         </div>
                     </div>
 
-                    {/* 2 - Affiche le nom du propriétaireet sa photo */}
                     <div className='bloc-stars'>
                         <div className='div-etoiles'>
                             <p>{record.host.name}</p>
                             <img src={record.host.picture} alt={record.title} />
                         </div>
                         
-                        {/* 3 - Met et colorie les étoiles */}
+                  
                         <div className='stars'>
                             {
                                 arrayStars.map(element => {
@@ -77,8 +64,6 @@ function Card() {
                     </div>
                 </div>
 
-
-                {/* affiche la description et les équipements */}
                 <div className='collapseLogement'>
                     <Collapse title="Description" content={record.description} />
                     <Collapse title="Equipements" content={equipements} />

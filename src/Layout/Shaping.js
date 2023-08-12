@@ -1,7 +1,7 @@
 import React from 'react'
 import "../Styles/Shaping.scss"
 
-// composant qui gère la marge gauche et droite de 100% sauf le Footer, et wrappe le contenu enfant
+
 function Shaping({children}) {
     return (
         <div className='shaping'>

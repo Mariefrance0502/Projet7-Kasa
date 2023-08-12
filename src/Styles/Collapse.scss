@@ -1,4 +1,3 @@
-
 .collapse {
     display: flex;
     flex-direction: column;
@@ -32,13 +31,11 @@
 }
 
 
-
-/* affiche le contenu */
 .visible {
     display: block;
 }
 
-/* cache le contenu */
+
 .hidden {
     display: none;
 }
@@ -57,7 +54,7 @@
     margin: 0;
     border-radius: 10px;
     box-shadow: 0px 0px 20px rgb(193, 191, 191);
-    z-index: -1;    /* passe la zone de contenu sous la zone de titre*/
+    z-index: -1;   
 }
 
 .equipement-content {
@@ -72,6 +69,6 @@
     }
     .visible.collapse ul {
         font-size: 12px;
-        padding: 23px 7px 5px 11.5px; /* j'ai mis 5px en bas au lieu de 1.3px pour une question ésthétique */
+        padding: 23px 7px 5px 11.5px; 
     }
 }
