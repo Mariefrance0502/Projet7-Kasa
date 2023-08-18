@@ -1,14 +1,3 @@
-/*
-*    Utilisation de GRID au lieu de FLEX.
--
--    Avec Flex, lors de l'affichage des cartes logements, la ligne du bas n'ayant pas 
--    une totalité d'éléments, ceux-ci se centrent et sur les conseils de mon Mentor 
-~    ATHECK GABRIEL 
--    cette disposition n'est pas une bonne habitude à prendre.
--    Il m'a conseillé de faire en sorte qu'ils soient affichés en partant de la gauche.
-*/
-
-/* Conteneur d'affichage des cartes logements */
 .logements {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -55,7 +44,7 @@
     line-height: 142.6%;
     margin: 0px 20px;
     align-items: center;
-    overflow: hidden;  /* empêche le titre de sortir du bloc */
+    overflow: hidden;  
     color: white;
 }
 

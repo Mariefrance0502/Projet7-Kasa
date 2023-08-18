@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import Navbar from "../Components/Navbar/Navbar"
-import Footer from "../Components/Footer/Footer"
 import Main from "../Components/Main/Main"
 import ErrorPage from "./ErrorPage"
 import Collapse from '../Components/Collapse/Collapse'
 import Carousel from '../Components/Carousel/Carousel'
 import "../Styles/Logements.css"
 import Datas from "../Datas/logements.json"
+import Footer from '../Components/Footer/Footer'
 
 
  
@@ -63,7 +63,7 @@ function Logements() {
                     <Collapse title="Equipements" content={equipements} />
                 </div>
             </Main>
-            <Footer />
+            <Footer/>
         </div>
     )
 }

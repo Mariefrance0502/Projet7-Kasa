@@ -3,6 +3,7 @@
     background-position: center;
     background-size: cover;
     border-radius: 25px;
+    background-color: transparent;
 }
 
 
@@ -32,7 +33,7 @@
 
 @media (max-width: 768px) {
     .banner h1 { 
-        font-size: 1rem; 
+        font-size: 1.5rem; 
     }
     .banner, .banner2 {
         margin-top: 0px;
@@ -40,6 +41,6 @@
         background-position:left;
     }
     .banner2, .banner, .banner-commun { 
-        border-radius: 10px; 
+        border-radius: 13px; 
     }
 }
