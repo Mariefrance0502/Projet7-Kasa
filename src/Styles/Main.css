@@ -1,4 +1,4 @@
-.shaping {
+.main {
     display: flex;
     flex-direction: column;
     margin: 10px 100px;
@@ -7,6 +7,6 @@
 
 
 @media (max-width: 768px) {
-    .shaping { margin-inline: 10px; }
+    .main { margin-inline: 10px; }
 }
 

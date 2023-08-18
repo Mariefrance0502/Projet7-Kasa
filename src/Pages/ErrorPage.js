@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react'
 import { Link } from "react-router-dom"
-import Navbar from "../Layout/Navbar"
+import Navbar from "../Components/Navbar/Navbar"
 
 
-import "../Styles/ErrorPage.scss"
+import "../Styles/ErrorPage.css"
 
 function ErrorPage() {
     return (

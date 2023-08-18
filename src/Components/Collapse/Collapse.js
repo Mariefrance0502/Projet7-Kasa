@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import chevronUp from "../Assets/ChevronUp.png"
-import chevronDown from "../Assets/ChevronDown.png"
-import "../Styles/Collapse.scss"
+import chevronUp from "../../Assets/ChevronUp.png"
+import chevronDown from "../../Assets/ChevronDown.png"
+import "../../Styles/Collapse.css"
 
 
 

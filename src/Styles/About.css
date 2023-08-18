@@ -12,8 +12,6 @@
     flex-direction: column;
 }
 
-
-// Responsive 
 @media (max-width: 800px) { 
     .about { padding-inline: 0; }
 }

@@ -1,15 +1,15 @@
 import React from 'react'
-import Navbar from "../Layout/Navbar"
-import Shaping from '../Layout/Shaping'
-import Banner from '../Components/Banner'
-import Footer from "../Layout/Footer"
-import Cards from '../Components/Cards'
-import "../Styles/Home.scss"
+import Navbar from "../Components/Navbar/Navbar"
+import Main from '../Components/Main/Main'
+import Banner from '../Components/Banner/Banner'
+import Footer from "../Components/Footer/Footer"
+import Cards from '../Components/Cards/Cards'
+import "../Styles/Home.css"
 
 function Home() {
     return (
         <div role="main">
-            <Shaping>
+            <Main>
                 <Navbar />
                 <Banner>
                     <div className="banner banner-commun">
@@ -17,7 +17,7 @@ function Home() {
                     </div>
                 </Banner>
                 <Cards />
-            </Shaping>
+            </Main>
             <Footer />
         </div>
     )

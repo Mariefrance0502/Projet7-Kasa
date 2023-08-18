@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import chevronGauche from "../Assets/ChevronGauche.png"
-import chevronDroit from "../Assets/ChevronDroit.png"
-import "../Styles/Carousel.scss"
+import chevronGauche from "../../Assets/ChevronGauche.png"
+import chevronDroit from "../../Assets/ChevronDroit.png"
+import "../../Styles/Carousel.css"
 
 
 function Carousel({pictures}) { 

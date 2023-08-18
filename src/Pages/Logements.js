@@ -1,78 +1,71 @@
 import React, { useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
-import Navbar from "../Layout/Navbar"
-import Footer from "../Layout/Footer"
-import Shaping from "../Layout/Shaping"
+import Navbar from "../Components/Navbar/Navbar"
+import Footer from "../Components/Footer/Footer"
+import Main from "../Components/Main/Main"
 import ErrorPage from "./ErrorPage"
-import Collapse from '../Components/Collapse'
-import Carousel from '../Components/Carousel'
-import "../Styles/Card.scss"
-import records from "../Datas/logements.json"
+import Collapse from '../Components/Collapse/Collapse'
+import Carousel from '../Components/Carousel/Carousel'
+import "../Styles/Logements.css"
+import Datas from "../Datas/logements.json"
 
 
  
 const arrayStars = [1, 2, 3, 4, 5]
 
-function Card() {
+function Logements() {
    
     const [searchParams] = useSearchParams();
   
     const [idLogement] = useState(searchParams.get('_id'));
     
-    const record = records.find(element => element.id === idLogement)
+    const data= Datas.find(element => element.id === idLogement)
     
-    if (!record) return(<ErrorPage />)
+    if (!data) return(<ErrorPage />)
 
-    const equipements = record.equipments.map((element, index) => (
+    const equipements = data.equipments.map((element, index) => (
           <li className='description-content' key={"equip-"+index.toString()}>{element}</li>
         ))
     
 
     return (
         <div className='logement'>
-            <Shaping>
+            <Main>
                 <Navbar />
-
-                <Carousel pictures={record.pictures}/>
-
+                <Carousel pictures={data.pictures}/>
                 <div className='ficheLogement'>
                     <div className='div-description'>
-                        <h1>{record.title}</h1>
-                        <h4>{record.location}</h4>
+                        <h1>{data.title}</h1>
+                        <h4>{data.location}</h4>
                         <div className='div-tags'>
-                            { record.tags.map((element, index) => {
+                            { data.tags.map((element, index) => {
                                 return(<p className='tags' key={"tags-"+index}>{element}</p>)
                             })}
                         </div>
                     </div>
-
                     <div className='bloc-stars'>
                         <div className='div-etoiles'>
-                            <p>{record.host.name}</p>
-                            <img src={record.host.picture} alt={record.title} />
+                            <p>{data.host.name}</p>
+                            <img src={data.host.picture} alt={data.title} />
                         </div>
-                        
-                  
                         <div className='stars'>
                             {
                                 arrayStars.map(element => {
-                                    const nbreEtoiles = parseInt(record.rating)
+                                    const nbreEtoiles = parseInt(data.rating)
                                     return(<span key={"star-"+element} className={element <= nbreEtoiles ? 'span1' : 'span2'}>★</span>)
                                 })
                             }
                         </div>
                     </div>
                 </div>
-
                 <div className='collapseLogement'>
-                    <Collapse title="Description" content={record.description} />
+                    <Collapse title="Description" content={data.description} />
                     <Collapse title="Equipements" content={equipements} />
                 </div>
-
-            </Shaping>
+            </Main>
             <Footer />
         </div>
     )
 }
 
-export default Card
+export default Logements

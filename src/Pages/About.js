@@ -1,11 +1,11 @@
 import React from 'react'
-import Shaping from "../Layout/Shaping"
-import Navbar from "../Layout/Navbar"
-import Banner from '../Components/Banner'
-import Footer from "../Layout/Footer"
-import Collapse from '../Components/Collapse'
+import Main from "../Components/Main/Main"
+import Navbar from "../Components/Navbar/Navbar"
+import Banner from '../Components/Banner/Banner'
+import Footer from "../Components/Footer/Footer"
+import Collapse from '../Components/Collapse/Collapse'
 
-import "../Styles/About.scss"
+import "../Styles/About.css"
 
 function About() {
     // contenu qui sera affiché dans les Collapse
@@ -15,7 +15,7 @@ function About() {
     const securite  = "La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes."
     return (
         <div className='flex'>
-            <Shaping>
+            <Main>
                 <Navbar />
                 <Banner>
                     <div className="banner2 banner-commun"></div>
@@ -26,7 +26,7 @@ function About() {
                     <div><Collapse title="Service" content={service} /></div>
                     <div><Collapse title="Sécurité" content={securite} /></div>
                 </div>
-            </Shaping>
+            </Main>
             <Footer />
         </div>
     )

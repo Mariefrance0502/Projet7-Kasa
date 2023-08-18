@@ -9,20 +9,19 @@
 .ficheLogement {
     display: flex;
     margin-top: 30px;
-
-    & h4 {
-        color: #ff6060;
-        margin-top: 10px;
-        font-size: 18px;
-    }
-    
-    & h1 {
-        color: #ff6060;
-        margin: 0;
-        font-size: 36px;
-    }
 }
 
+.ficheLogement h4  {
+    color: #ff6060;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.ficheLogement h1 {
+    color: #ff6060;
+    margin: 0;
+    font-size: 36px;
+}
 
 .div-tags {
     display: flex;
@@ -49,26 +48,26 @@
     gap: 10px;
     color: #ff6060;
     width: 167px;
-    
-    & p {
-        display: flex;
-        text-align: right;
-        font-size: 18px;
-        width: 93px;
-        height: 52px;
-        align-items: center;
-        text-shadow: 0px 0px 5px rgb(180, 166, 166);
-    }
-
-    & img {
-        width: 64px;
-        height: 64px;
-        border-radius: 50%;
-        margin-top: 15px;
-        box-shadow: 0px 0px 10px rgb(175, 136, 136);
-    }
 }
  
+.div-etoiles p {
+    display: flex;
+    text-align: right;
+    font-size: 18px;
+    width: 93px;
+    height: 52px;
+    align-items: center;
+    text-shadow: 0px 0px 5px rgb(180, 166, 166);
+}
+
+.div-etoiles img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin-top: 15px;
+    box-shadow: 0px 0px 10px rgb(175, 136, 136);
+}
+
 
 .div-description {
     width: 100%;
@@ -102,8 +101,6 @@
 
 
 
-
-//  RESPONSIVE 
 /** média query */
 
 @media (max-width: 768px) {

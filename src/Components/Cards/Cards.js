@@ -1,14 +1,14 @@
 import React from 'react'
 import { Link } from "react-router-dom"
-import records from "../Datas/logements.json"
-import "../Styles/Cards.scss"
+import Datas from "../../Datas/logements.json"
+import "../../Styles/Cards.css"
 
 
 const Cards = () => {
     return (
         <div className="logements">
-            {records.map((record) => {
-                const { id, cover, title } = record;
+            {Datas.map((data) => {
+                const { id, cover, title } = data;
                 return (
                     <div className="fiche-logement" key={id}>
 
